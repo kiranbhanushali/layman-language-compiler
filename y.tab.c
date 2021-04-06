@@ -73,13 +73,14 @@
 int yyerror(char * m);
 int yylex();
 
+// will store 
 int num1  =0 ; 
 int num2 =0 ; 
 int operator_c = 0 ; 
 int ret_type = 0 ; 
 int evaluate();
 
-#line 83 "y.tab.c"
+#line 84 "y.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -169,13 +170,13 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 14 "parser.y"
+#line 17 "parser.y"
 
     int num ;
     int op;
     int ret_type;
 
-#line 179 "y.tab.c"
+#line 180 "y.tab.c"
 
 };
 typedef union YYSTYPE YYSTYPE;
@@ -588,8 +589,8 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    28,    28,    29,    30,    32,    33,    36,    37,    38,
-      39,    41,    43,    44
+       0,    32,    32,    34,    36,    39,    41,    44,    45,    46,
+      47,    50,    53,    54
 };
 #endif
 
@@ -1179,37 +1180,37 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* statement: WHICH IS the operator stm1 EOL  */
-#line 28 "parser.y"
+#line 32 "parser.y"
                                            { ret_type = 0;  operator_c = (yyvsp[-2].op); evaluate();  return 0 ;}
-#line 1185 "y.tab.c"
+#line 1186 "y.tab.c"
     break;
 
   case 3: /* statement: FROM num AND num WHICH IS operator EOL  */
-#line 29 "parser.y"
+#line 34 "parser.y"
                                                     { ret_type = 0;num1=(yyvsp[-6].num) ; num2=(yyvsp[-4].num);  operator_c = (yyvsp[-1].op); evaluate();  return 0 ;}
-#line 1191 "y.tab.c"
+#line 1192 "y.tab.c"
     break;
 
   case 4: /* statement: IS num operator THAN num EOL  */
-#line 30 "parser.y"
+#line 36 "parser.y"
                                           { ret_type = 1; num1=(yyvsp[-4].num) ; num2=(yyvsp[-1].num);  operator_c = (yyvsp[-3].op); evaluate();  return 0 ;}
-#line 1197 "y.tab.c"
+#line 1198 "y.tab.c"
     break;
 
   case 5: /* stm1: NUMBER num OR num  */
-#line 32 "parser.y"
+#line 39 "parser.y"
                            { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ; printf("number is: %d and %d\n ", (yyvsp[-2].num)  , (yyvsp[0].num)); }
-#line 1203 "y.tab.c"
+#line 1204 "y.tab.c"
     break;
 
   case 6: /* stm1: BETWEEN num AND num  */
-#line 33 "parser.y"
+#line 41 "parser.y"
                              { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ; printf("number is: %d and %d\n ", (yyvsp[-2].num)  , (yyvsp[0].num)); }
-#line 1209 "y.tab.c"
+#line 1210 "y.tab.c"
     break;
 
 
-#line 1213 "y.tab.c"
+#line 1214 "y.tab.c"
 
       default: break;
     }
@@ -1403,12 +1404,14 @@ yyreturn:
   return yyresult;
 }
 
-#line 46 "parser.y"
+#line 56 "parser.y"
 
 
 int yyerror(char * message){
+
     printf("Input Sentence is Invalid! : %s\n",message);
     exit(1);
+
 }
 
 int min ( int a , int b ) {
