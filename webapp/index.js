@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 var fs = require("fs");
 const fsPromises = require("fs").promises;
 const { exec } = require("child_process");
-
+require("dotenv").config();
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -35,6 +35,6 @@ app.post("/api", async function (req, res) {
   });
   // res.send(x);
 });
-app.listen(port, () => {
+app.listen(process.env.port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
