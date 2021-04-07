@@ -770,67 +770,67 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 9 "lexer.l"
-{printf("Keyword: %s\n",yytext);yylval.ret_type=1; return WHICH;}
+{   yylval.ret_type=1; return WHICH;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 10 "lexer.l"
-{printf("Keyword: %s\n",yytext);yylval.ret_type=1;return WHICH;}
+{   yylval.ret_type=1;return WHICH;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 11 "lexer.l"
-{printf("Keyword: %s\n",yytext);return IS;}
+{   return IS;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 12 "lexer.l"
-{printf("Keyword: %s\n",yytext);yylval.ret_type=0;return IS;}
+{   yylval.ret_type=0;return IS;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 13 "lexer.l"
-{printf("Keyword: %s\n",yytext);return OR;}
+{   return OR;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 14 "lexer.l"
-{printf("Keyword: %s\n",yytext);return AND;}
+{   return AND;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 15 "lexer.l"
-{printf("Keyword: %s\n",yytext);return NUMBER;}
+{   return NUMBER;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 16 "lexer.l"
-{printf("Keyword: %s\n",yytext);return THAN;}
+{   return THAN;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 17 "lexer.l"
-{printf("Keyword: %s\n",yytext);return BETWEEN;}
+{   return BETWEEN;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 18 "lexer.l"
-{printf("Keyword: %s\n",yytext);return FROM;}
+{   return FROM;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 19 "lexer.l"
-{printf("Keyword: %s\n",yytext);return THE;}
+{   return THE;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 20 "lexer.l"
-{printf("Number: %s\n",yytext); yylval.num = atoi(yytext) ; return NUM;}
+{ yylval.num = atoi(yytext) ; return NUM;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 21 "lexer.l"
-{printf("Qusestion mark: %s\n",yytext);return EOL;} 
+{return EOL;} 
 	YY_BREAK
 case 15:
 /* rule 15 can match eol */
@@ -841,22 +841,22 @@ YY_RULE_SETUP
 case 16:
 YY_RULE_SETUP
 #line 23 "lexer.l"
-{printf("Comparator: %s\n",yytext); yylval.op = 1 ;return BIGGER;}
+{    yylval.op = 1 ;return BIGGER;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 24 "lexer.l"
-{printf("Comparator: %s\n",yytext); yylval.op= 0 ;return SMALLER;}
+{    yylval.op= 0 ;return SMALLER;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 25 "lexer.l"
-{printf("Comparator: %s\n",yytext); yylval.op = 1;return LARGER;}
+{    yylval.op = 1;return LARGER;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 26 "lexer.l"
-{printf("Comparator: %s\n",yytext); yylval.op = 0;return LESSER;}
+{    yylval.op = 0;return LESSER;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP

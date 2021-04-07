@@ -1199,13 +1199,13 @@ yyreduce:
 
   case 5: /* stm1: NUMBER num OR num  */
 #line 39 "parser.y"
-                           { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ; printf("number is: %d and %d\n ", (yyvsp[-2].num)  , (yyvsp[0].num)); }
+                           { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ;}
 #line 1204 "y.tab.c"
     break;
 
   case 6: /* stm1: BETWEEN num AND num  */
 #line 41 "parser.y"
-                             { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ; printf("number is: %d and %d\n ", (yyvsp[-2].num)  , (yyvsp[0].num)); }
+                             { num1 = (yyvsp[-2].num) ; num2 = (yyvsp[0].num) ;}
 #line 1210 "y.tab.c"
     break;
 
@@ -1428,9 +1428,6 @@ int evaluate(){
     // ret_type == 0 means we have to return the number and ret_type == 1 meand we have to validate the comparision.
     // operator_c == 0 is for smaller and lesser    
     // operator_c == 1 is for larger and bigger
-
-    printf("Number1 is %d and Number2 is %d \n",num1,num2);
-    printf("--------------------------------------------------------\n");
     if( ret_type ==0 ) {
         if( operator_c == 0 ) {
             printf("Ans: %d\n",min(num1,num2));
@@ -1453,7 +1450,6 @@ int evaluate(){
             }
         }
     }
-    printf("--------------------------------------------------------\n");
 }
 int main(){
 

@@ -36,9 +36,9 @@ statement : WHICH IS the operator stm1 EOL { ret_type = 0;  operator_c = $<op>4;
           | IS num operator THAN num EOL  { ret_type = 1; num1=$<num>2 ; num2=$<num>5;  operator_c = $<op>3; evaluate();  return 0 ;}
 
 
-stm1:    NUMBER num OR num { num1 = $<num>2 ; num2 = $<num>4 ; printf("number is: %d and %d\n ", $<num>2  , $<num>4); }
+stm1:    NUMBER num OR num { num1 = $<num>2 ; num2 = $<num>4 ;}
 
-     |   BETWEEN num AND num { num1 = $<num>2 ; num2 = $<num>4 ; printf("number is: %d and %d\n ", $<num>2  , $<num>4); }
+     |   BETWEEN num AND num { num1 = $<num>2 ; num2 = $<num>4 ;}
     ;
 
 operator: LESSER
@@ -76,9 +76,6 @@ int evaluate(){
     // ret_type == 0 means we have to return the number and ret_type == 1 meand we have to validate the comparision.
     // operator_c == 0 is for smaller and lesser    
     // operator_c == 1 is for larger and bigger
-
-    printf("Number1 is %d and Number2 is %d \n",num1,num2);
-    printf("--------------------------------------------------------\n");
     if( ret_type ==0 ) {
         if( operator_c == 0 ) {
             printf("Ans: %d\n",min(num1,num2));
@@ -101,7 +98,6 @@ int evaluate(){
             }
         }
     }
-    printf("--------------------------------------------------------\n");
 }
 int main(){
 
