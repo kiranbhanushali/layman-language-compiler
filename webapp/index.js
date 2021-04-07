@@ -35,6 +35,6 @@ app.post("/api", async function (req, res) {
   });
   // res.send(x);
 });
-app.listen(process.env.port||3000, () => {
+app.listen(process.env.PORT||3000, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
