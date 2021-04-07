@@ -6,13 +6,12 @@ Following is a valid sentence in a layman friendly
 language description and compiler-**
 
 Valid sentences in language :
-	1. Which is bigger number 7 or 2?
-	2. From 7 and 2 which is larger ?
-	3. Is 7 bigger than 2?
-	4. Is 2 smaller than 4?
-	5. Which is smaller between 4 and 9?
-	6. Which is smaller number 4 or 2?
-
+*	Which is bigger number 7 or 2?
+*	From 7 and 2 which is larger ?
+*	Is 7 bigger than 2?
+*	Is 2 smaller than 4?
+*	Which is smaller between 4 and 9?
+*	Which is smaller number 4 or 2?
 
 
 
