@@ -5,7 +5,7 @@ Following is a valid sentence in a layman friendly
 “comparison ” program. Generate its appropriate
 language description and compiler-**
 
-> Valid sentences in language :
+Valid sentences in language :
 	1. Which is bigger number 7 or 2?
 	2. From 7 and 2 which is larger ?
 	3. Is 7 bigger than 2?
