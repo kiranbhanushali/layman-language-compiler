@@ -11,7 +11,7 @@ Valid sentences in language :
 *	Is 7 bigger than 2?
 *	Is 2 smaller than 4?
 *	Which is smaller between 4 and 9?
-*	Which is smaller number 4 or 2?
+*	Which is smaller number 44 or 22?
 
 
 
